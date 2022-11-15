@@ -5,12 +5,14 @@ class MyTextField extends StatelessWidget {
   IconData icon;
   TextEditingController controller;
   bool obscureText;
+  AutovalidateMode autovalidateMode;
 
-  MyTextField({Key? key,required this.hintText,required this.icon,required this.controller,required this.obscureText}) : super(key: key);
+  MyTextField({Key? key,required this.hintText,required this.icon,required this.controller,required this.obscureText,required this.autovalidateMode,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      autovalidateMode: autovalidateMode,
       obscureText: obscureText,
       controller: controller,
       style: const TextStyle(
